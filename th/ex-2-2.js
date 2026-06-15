@@ -8,6 +8,31 @@
 */
 
 // Start coding here
+// function findNLowestNumber(arrOfNumbers, n) {
+//   const NLowestNumber = [];
+//   for (let i = 0; i < n; i++) {
+//     const lowestNumber = findLowestNumber(arrOfNumbers);
+//     NLowestNumber.push(lowestNumber);
+//     const lowestNumberIndex = arrOfNumbers.indexOf(lowestNumber);
+//     arrOfNumbers.splice(lowestNumberIndex, 1);
+//   }
+//   return NLowestNumber;
+// }
+// function findLowestNumber(arrOfNumbers) {
+//   let lowestNumber = arrOfNumbers[0];
+//   for (let i = 1; i < arrOfNumbers.length; i++) {
+//     if (arrOfNumbers[i] < lowestNumber) {
+//       lowestNumber = arrOfNumbers[i];
+//     }
+//   }
+//   return lowestNumber;
+// }
+
+function findNLowestNumber(arrOfNumbers, n) {
+  let newArray = [...arrOfNumbers];
+  newArray.sort((a,b)=> a-b);
+  return newArray.slice(0, n);
+}
 
 const arrOfNumbers1 = [10, 3, 55, 0, 18];
 let result1 = findNLowestNumber(arrOfNumbers1, 3);
