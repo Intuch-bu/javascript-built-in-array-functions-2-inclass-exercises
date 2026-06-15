@@ -8,6 +8,12 @@
 */
 
 // Start coding here
+function findIfItemExist(products, productionName){
+    if(products.includes(productionName)){
+        return `พบ ${productionName} ในรายการสินค้า`
+    }
+    return `ไม่พบ ${productionName} ในรายการสินค้า`
+}
 
 const products = ["milk", "bread", "eggs", "butter", "cheese", "orange juice"];
 
